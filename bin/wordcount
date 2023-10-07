@@ -1,0 +1,6 @@
+#! /usr/bin/env ruby
+
+require_relative '../lib/word_count'
+
+word_count = WordCount.new(ARGV)
+result = word_count.execute_command
