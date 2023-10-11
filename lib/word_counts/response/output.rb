@@ -1,3 +1,5 @@
+require_relative '../../word_count'
+
 module WordCounts
   module Response
     class Output

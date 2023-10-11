@@ -2,15 +2,15 @@ require 'pathname'
 
 module WordCounts
   class FileHandler
-    attr_reader :files_path
+    attr_reader :files_paths
 
-    def initialize(files_path)
-      @files_path = files_path
+    def initialize(files_paths)
+      @files_paths = files_paths
     end
 
 
     def absolute_paths
-      files_path.map { |file_path| resolve_file_path(file_path) }
+      files_paths.map { |file_path| resolve_file_path(file_path) }
     end
 
     private

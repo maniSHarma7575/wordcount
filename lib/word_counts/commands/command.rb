@@ -1,3 +1,5 @@
+require 'Pathname'
+
 module WordCounts
   module Commands
     class Command

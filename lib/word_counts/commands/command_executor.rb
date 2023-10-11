@@ -46,7 +46,7 @@ module WordCounts
         command_output[file_path][option] = result || 0
 
         if option == Options::MAX_LENGTH_LINE
-          command_output['total'][option] = result if [command_output['total'][option], result || 0].max
+          command_output['total'][option] = [command_output['total'][option], result || 0].max
         else
           command_output['total'][option] += result || 0
         end
