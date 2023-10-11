@@ -1,4 +1,6 @@
 require_relative 'options'
+require_relative '../word_count'
+
 require 'pry'
 
 module WordCounts
