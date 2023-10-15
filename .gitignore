@@ -1,0 +1,12 @@
+*.gem
+*.rbc
+/.config
+/coverage/
+/pkg/
+/test/tmp/
+/tmp/
+
+## Environment normalization
+/.bundle/
+/vendor/bundle
+/lib/bundler/man/

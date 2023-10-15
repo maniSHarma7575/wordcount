@@ -19,8 +19,8 @@ git clone https://github.com/maniSHarma7575/wordcount
 # Change directory
 cd wordcount
 
-# Run test
-rake test
+# Run rubocop & test
+bundle exec rake
 
 # Add as linux command
 

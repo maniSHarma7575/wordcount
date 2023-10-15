@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 module WordCounts
   class Options
-    NO_OF_BYTES = 'c'.freeze
-    NO_OF_CHARACTERS = 'm'.freeze
-    NO_OF_WORDS = 'w'.freeze
-    NO_OF_LINES = 'l'.freeze
-    MAX_LENGTH_LINE = 'L'.freeze
+    NO_OF_BYTES = 'c'
+    NO_OF_CHARACTERS = 'm'
+    NO_OF_WORDS = 'w'
+    NO_OF_LINES = 'l'
+    MAX_LENGTH_LINE = 'L'
 
     VALID_OPTIONS = [NO_OF_BYTES, NO_OF_CHARACTERS, NO_OF_WORDS, NO_OF_LINES, MAX_LENGTH_LINE].freeze
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../../word_count'
 
 module WordCounts
@@ -11,10 +13,9 @@ module WordCounts
         "#{output_string} #{file_path}\n"
       end
 
-      private
-        def self.file_missing_output(file_path)
-          "#{WordCount::COMMAND_NAME}: #{file_path}: open: No such file or directory\n"
-        end
+      def self.file_missing_output(file_path)
+        "#{WordCount::COMMAND_NAME}: #{file_path}: open: No such file or directory\n"
+      end
     end
   end
 end

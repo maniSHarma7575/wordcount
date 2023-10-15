@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
 require_relative '../lib/word_counts/file_handler'
 
@@ -7,7 +9,6 @@ class FileHandlerTest < Minitest::Test
   end
 
   def test_absolute_paths
-    expected_paths = @files_paths.map { |file_path| Pathname.new("#{Dir.pwd}/#{file_path}") }
     absolute_paths = WordCounts::FileHandler.new(@files_paths).absolute_paths
     assert_equal @files_paths.map { |file_path| Pathname.new("#{Dir.pwd}/#{file_path}") }, absolute_paths
   end
