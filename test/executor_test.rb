@@ -14,6 +14,6 @@ class ExecutorTest < Minitest::Test
 
   def test_run_command_for_existing_files
     output = WordCounts::Executor.new(options: @options, files_path: @files_paths).run_command
-    assert_equal "    335043    332147    58164    7146    78 test/fixtures/files/test.txt\n    43    43    7    1    43 test/fixtures/files/test1.txt\n    335086    332190    58171    7147    43 total\n", output
+    assert_equal "    335043    332147    58164    7146    78 test/fixtures/files/test.txt\n    43    43    7    1    43 test/fixtures/files/test1.txt\n    335086    332190    58171    7147    78 total\n", output
   end
 end

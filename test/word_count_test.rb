@@ -40,6 +40,6 @@ class WordCountTest < Minitest::Test
       word_count.execute_command
     end
 
-    assert_match(/    335043    332147    58164    7146    78 test\/fixtures\/files\/test.txt\n    43    43    7    1    43 test\/fixtures\/files\/test1.txt\n    335086    332190    58171    7147    43 total/, out)
+    assert_match(/    335043    332147    58164    7146    78 test\/fixtures\/files\/test.txt\n    43    43    7    1    43 test\/fixtures\/files\/test1.txt\n    335086    332190    58171    7147    78 total/, out)
   end
 end
