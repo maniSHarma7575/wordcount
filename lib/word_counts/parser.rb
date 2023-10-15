@@ -1,7 +1,7 @@
+# frozen_string_literal: true
+
 require_relative 'options'
 require_relative '../word_count'
-
-require 'pry'
 
 module WordCounts
   class Parser
@@ -18,13 +18,12 @@ module WordCounts
 
         options_chars = argument[1..].split('').sort
         invalid_chars = Options.filter_invalid_options(options_chars)
-        
+
         if invalid_chars.empty?
           options.concat(options_chars)
         else
           invalid_option = invalid_chars[0]
           raise "#{WordCount::COMMAND_NAME}: illegal option -- #{invalid_option} \n usage: #{WordCount::COMMAND_NAME} [-Lclmw] [file ...]"
-          exit(1)
         end
       end
       options.uniq

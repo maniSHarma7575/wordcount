@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'word_counts/parser'
 require_relative 'word_counts/executor'
 require_relative 'word_counts/options'

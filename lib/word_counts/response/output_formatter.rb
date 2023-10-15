@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'output'
 
 module WordCounts
@@ -10,9 +12,10 @@ module WordCounts
         @command_output = command_output
       end
 
-
       def format_output
-        (files_path + ['total']).map { |file_path| Output.generate_output_string(file_path, command_output[file_path]) }.join
+        (files_path + ['total']).map do |file_path|
+          Output.generate_output_string(file_path, command_output[file_path])
+        end.join
       end
     end
   end

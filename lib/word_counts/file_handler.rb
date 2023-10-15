@@ -1,4 +1,4 @@
-require 'pathname'
+# frozen_string_literal: true
 
 module WordCounts
   class FileHandler
@@ -8,7 +8,6 @@ module WordCounts
       @files_paths = files_paths
     end
 
-
     def absolute_paths
       files_paths.map { |file_path| resolve_file_path(file_path) }
     end
@@ -17,7 +16,7 @@ module WordCounts
 
     def resolve_file_path(file_path)
       Pathname.new(file_path).realpath
-    rescue
+    rescue StandardError
       nil
     end
   end

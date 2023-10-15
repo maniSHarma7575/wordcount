@@ -1,4 +1,4 @@
-require 'Pathname'
+# frozen_string_literal: true
 
 module WordCounts
   module Commands
@@ -6,7 +6,7 @@ module WordCounts
       attr_reader :lines
 
       def initialize(file_path)
-        @lines ||= File.foreach(file_path)
+        @lines = File.foreach(file_path)
       end
 
       def max_length_line

@@ -1,16 +1,18 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
 require_relative '../../lib/word_counts/response/output'
 
 class OutputTest < Minitest::Test
   def setup
     @file_path = 'test/fixtures/files/test.txt'
-    @command_output = { 
-      "file_exists" => Pathname.new('test/fixtures/files/test.txt').realpath, 
-      "L"=>78,
-      "l"=>7146,
-      "c"=>335043,
-      "w"=>58164,
-      "m"=>332147
+    @command_output = {
+      'file_exists' => Pathname.new('test/fixtures/files/test.txt').realpath,
+      'L' => 78,
+      'l' => 7146,
+      'c' => 335043,
+      'w' => 58164,
+      'm' => 332147
     }
   end
 

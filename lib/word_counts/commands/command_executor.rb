@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'command'
 require_relative '../options'
 
@@ -12,10 +14,9 @@ module WordCounts
         @files_paths = files_paths
       end
 
-
       def execute_command
         command_output = initialize_command_output_hash
-      
+
         absolute_paths.each_with_index do |path, index|
           if path
             command = Command.new(path)
@@ -37,12 +38,12 @@ module WordCounts
         command_output['total'] = Hash.new(0)
         command_output
       end
-      
+
       def update_command_output(command_output, index, path, option = nil, result = nil)
         file_path = files_paths[index]
         command_output[file_path]['file_exists'] = path if path
         return unless option
-      
+
         command_output[file_path][option] = result || 0
 
         if option == Options::MAX_LENGTH_LINE
